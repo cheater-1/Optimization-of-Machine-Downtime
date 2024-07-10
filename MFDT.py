@@ -13,21 +13,6 @@ from sklearn.model_selection import train_test_split
 import pickle, joblib
 from sqlalchemy import create_engine, text
 from urllib.parse import quote
-
-# Creating engine which connect to MySQL
-# Add Mysql Database credentials
-'''
-user = 'user1' # user name
-pw = '360@Digi#TMG' # password
-db = 'amerdb' # database
-'''
-'''
-user = 'root' # user name
-pw = 'Classroom' # password
-db = 'Abhimadhu1' # database
-# creating engine to connect database
-engine = create_engine(f"mysql+pymysql://{user}:%s@localhost/{db}" %quote(f'{pw}'))
-'''
 #lets import the data
 data = pd.read_csv(r"prima_13.csv")
 
@@ -36,7 +21,7 @@ data = pd.read_csv(r"prima_13.csv")
 
 user_name = 'root'
 database = 'Classroom'
-your_password = 'Abhimadhu1'
+your_password = 'Abh#####'
 engine = create_engine(f'mysql+pymysql://{user_name}:%s@localhost:3306/{database}' % quote(f'{your_password}'))
 
 data.to_sql('prima_13', con = engine, if_exists = 'replace', chunksize = 1000, index = False)
